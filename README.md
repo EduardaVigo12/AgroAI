@@ -1,6 +1,6 @@
 # PlantAI
 
-## Solução
+# Solução
 Introduzindo o PlantAI: sua solução inteligente para o cultivo saudável. Nosso
 aplicativo revolucionário utiliza a mais recente tecnologia de imagem para capturar
 fotos detalhadas das suas plantações. Não apenas isso, o PlantAI vai além: com a
@@ -33,11 +33,11 @@ tomar decisões fundamentadas e obter os melhores resultados. Experimente o
 futuro da agricultura com o PlantAI - onde a tecnologia encontra a terra para colher
 o sucesso
 
-## Arquitetura de IA
+# Arquitetura de IA
 A arquitetura de IA utilizada é um modelo de aprendizado profundo (deep learning) baseado
 em redes neurais convolucionais (CNN) e uma rede neural de linguagem natural para
 interação com o usuário.
-# Rede Neural Convolucional (CNN):
+## Rede Neural Convolucional (CNN):
 A CNN é usada para a classificação de imagens. Ela é responsável por identificar e classificar
 a doença presente nas imagens das plantas.
 O modelo CNN usado é uma adaptação do ResNet-50, uma rede neural profunda com 50
@@ -45,13 +45,13 @@ camadas de convolução que foi pré-treinada em um grande conjunto de dados de 
 (ImageNet). Essa arquitetura é escolhida devido à sua eficácia em tarefas de classificação de
 imagens.
 
-# Rede Neural de Linguagem Natural (ChatGPT):
+## Rede Neural de Linguagem Natural (ChatGPT):
 A rede neural de linguagem natural, conhecida como ChatGPT, é usada para interagir com o
 usuário e fornecer informações sobre a doença detectada nas plantas.
 O ChatGPT é alimentado com perguntas do usuário relacionadas à doença detectada, e ele
 gera respostas informativas com base em um grande volume de texto de treinamento.
 
-# Razões para a Escolha desta Arquitetura:
+## Razões para a Escolha desta Arquitetura:
 A escolha de uma CNN baseada no ResNet-50 para a classificação de imagens é devido à
 sua eficácia comprovada em tarefas de visão computacional, incluindo classificação de
 doenças em plantas.
@@ -61,7 +61,7 @@ Ambas as partes da arquitetura foram escolhidas por sua capacidade de lidar com 
 específicas: a CNN para processamento de imagem e o ChatGPT para processamento de
 linguagem.
 
-# Implementação da Arquitetura:
+## Implementação da Arquitetura:
 A CNN é implementada usando o framework TensorFlow, que oferece uma ampla gama de
 ferramentas para treinamento e avaliação de modelos de aprendizado profundo.
 O modelo CNN é treinado em um conjunto de dados de imagens de plantas com doenças
@@ -71,7 +71,7 @@ O ChatGPT é implementado com a API da OpenAI. Ele é alimentado com perguntas d
 usuário e gera respostas com base em modelos de linguagem treinados em um grande
 corpus de texto.
 
-# Base de Dados Utilizada:
+## Base de Dados Utilizada:
 A base de dados para treinamento e teste da CNN consiste em um conjunto de imagens de
 plantas com doenças conhecidas, com cada imagem associada a uma classe (doença
 específica).
@@ -83,7 +83,7 @@ com o processamento de linguagem natural. Ela foi implementada usando ferramenta
 modernas de aprendizado profundo e redes neurais, permitindo a automação de diagnósticos
 de doenças em plantas de forma eficiente e interativa.
 
-## Benefícios de mercado
+# Benefícios de mercado
 O PlantAI traz diversos benefícios para o mercado agrícola:
 1. Melhoria na Saúde das Plantas: A detecção de doenças por meio de
 tecnologia de imagem e inteligência artificial ajuda os agricultores a identificar
@@ -121,7 +121,7 @@ forma como a agricultura é conduzida, alavancando tecnologias avançadas
 para aumentar a eficiência e a qualidade das colheitas.
 Funcionalidades
 
-## Principais funcionalidades do PlantAI:
+# Principais funcionalidades do PlantAI:
 1. Captura de Imagens: Utiliza tecnologia de imagem para tirar fotos detalhadas
 das plantações.
 2. Detecção de Doenças: Usa inteligência artificial para identificar doenças que
