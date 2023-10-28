@@ -1,6 +1,7 @@
 import tensorflow as tf
 import numpy as np
 import openai
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 modelo = tf.keras.models.load_model('classificador_plantas.h5')
 
@@ -19,12 +20,28 @@ classe_prevista = np.argmax(previsao)
 mapa_classes = {0: 'Cercospora', 1: 'FungoBranco', 2: 'Fusarium', 3: 'Gibberella', 4: 'Nematoide'}
 doenca_detectada = mapa_classes[classe_prevista]
 
-print('Doença detectada:', doenca_detectada)
+doenca_para_planta = {
+    'Cercospora': 'Soja',
+    'FungoBranco': 'Soja',
+    'Fusarium': 'Milho',
+    'Gibberella': 'Milho',
+    'Nematoide': 'Batata'
+}
+
+planta_associada = doenca_para_planta.get(doenca_detectada, "Desconhecido")
+
+print(f'Planta: {planta_associada}')
+print(f'Doença detectada: {doenca_detectada}')
+
+confianca = previsao[0][classe_prevista]
+
+print(f'O nível de precisão dessa análise é de: {confianca * 100:.2f}%')
 
 resposta_usuario = input("Deseja informações sobre o tratamento desta doença? (Sim/Não): ")
 
+
 def obter_resposta_gpt3(pergunta):
-    openai.api_key = "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"
+    openai.api_key = "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"
     resposta = openai.Completion.create(
         engine="text-davinci-003",
         prompt=pergunta,
